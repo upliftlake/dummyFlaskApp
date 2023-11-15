@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-3
+spec:
+  selector:
+    matchLabels:
+      app: flask-app-3
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask-app-3
+    spec:
+      containers:
+      - name: flask-app-3
+        image: shafink/dummy-flask-app:v3
+        ports:
+        - containerPort: 5000
