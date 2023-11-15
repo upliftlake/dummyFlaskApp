@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: flask-app-4
   namespace: myapp-4
+  labels:
+    app.kubernetes.io/instance: myapp-argo-application
 spec:
   selector:
     matchLabels:
